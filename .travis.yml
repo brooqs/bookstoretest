@@ -1,0 +1,9 @@
+language: csharp
+solution: Book_Strore.sln
+
+services:
+  - docker:
+
+
+#before-install:
+#  - docker run -e $KHOST  -e $KTOKEN  kondukto/kondukto-cli:latest scan -p $(System.TeamProject) -t checkmarx -b $(Build.SourceBranchName)
