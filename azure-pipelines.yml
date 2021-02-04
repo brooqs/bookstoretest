@@ -10,6 +10,22 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: Application security testing@2020
+  inputs:
+    projectName: 'hakancx'
+    enableProxy: false
+    enableSastScan: true
+    CheckmarxService: 'bookstore1'
+    fullTeamName: 'CxServer'
+    scanTimeout: '90'
+    denyProject: true
+    comment: 'Dhy_Azure_PoC'
+    vulnerabilityThreshold: true
+    high: '2'
+    medium: '5'
+    low: '10'
+    enableDependencyScan: false
+    
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
